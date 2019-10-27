@@ -1,0 +1,143 @@
+.navbar {
+  padding: 15px 30px;
+  background-color: #f6f6f6;
+}
+
+.nav-wrapper,
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.sidebar-toggle {
+  z-index: 100;
+}
+
+.size-2x {
+  font-size: 2em;
+}
+
+.mode-toggle-wrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.toggle-text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.toggle-button {
+  cursor: pointer;
+  position: relative;
+  margin: 0 0.75rem 0 0.25rem;
+  display: -webkit-inline-box;
+  display: inline-flex;
+}
+
+.toggle-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.mode-toggle-rect {
+  height: 0.8rem;
+  width: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+
+.mode-toggle-circle {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #2b244d;
+  position: absolute;
+  top: -.2rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 rgba(0,0,255,.5);
+  -webkit-transition: left .3s linear;
+  transition: left .3s linear;
+  left: .2rem;
+}
+
+.mode-toggle-rect-checked {
+  background-color: #ff0070;
+}
+
+.mode-toggle-circle-checked {
+  background-color: #fff;
+  left: 1.5rem;
+}
+
+/* ********************************************************** */
+/* theme toggle switch animation starts */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 15px;
+  margin: 0px 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0,0,0,.5);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #000;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  bottom: -3px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ff0070;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: #fff;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* theme toggle switch animation ends */
+/* ********************************************************** */
