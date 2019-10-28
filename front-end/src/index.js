@@ -1,21 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter} from "react-router-dom";
+import "./index.css";
 
-import ReduxApp from './reduxConfig/ReduxApp';
+import ReduxApp from "./reduxConfig/ReduxApp";
 import { Provider } from "react-redux";
 import store from "./reduxConfig/store";
 
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 
 function MyApp() {
   return (
     <Provider store={store}>
-      <ReduxApp></ReduxApp>
+      <BrowserRouter>
+        <ReduxApp></ReduxApp>
+      </BrowserRouter>
     </Provider>
-  )
+  );
 }
-
 
 ReactDOM.render(<MyApp />, document.getElementById("root"));
 

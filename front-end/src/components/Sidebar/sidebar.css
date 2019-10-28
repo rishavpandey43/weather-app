@@ -1,0 +1,11 @@
+
+.sidebar-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: #eee;
+  width: 30%;
+  height: 100vh;
+  z-index: 100;
+  padding-top: 80px;
+}

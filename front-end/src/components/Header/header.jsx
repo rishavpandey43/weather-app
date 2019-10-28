@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,10 +13,10 @@ class Header extends Component {
           <div className="row w-100">
             <div className="col-4">
               <div className="nav-wrapper text-left">
-                <div className="sidebar-toggle cursor-pointer">
+                <div className="sidebar-toggle cursor-pointer d-none">
                   <FontAwesomeIcon icon={faBars} className="size-2x" />
                 </div>
-                <div className="logo-wrapper pl-4 pr-4">
+                <div className="logo-wrapper">
                   <div className="logo-img">
                     <img
                       src={require("../../images/weather_app_logo.png")}
@@ -36,17 +37,23 @@ class Header extends Component {
               </div>
             </div>
             <div className="col-4">
-              <div className="mode-toggle-wrapper">
+              <div className="mode-toggle-wrapper d-none">
                 <span className="toggle-text">Light</span>
                 <label className="switch">
-                  <input
-                    type="checkbox"
-                  />
-                  <span
-                    className="slider round"
-                  />
+                  <input type="checkbox" />
+                  <span className="slider round" />
                 </label>
                 <span className="toggle-text">Dark</span>
+              </div>
+              <div className="menu-item">
+                <ul className="navbar-nav">
+                  <li className="nav-item active">
+                    <Link to="/" className="nav-link">Home</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/add" className="nav-link">Add City</Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
