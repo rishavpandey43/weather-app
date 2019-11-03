@@ -13,7 +13,7 @@ function App(props) {
   return (
     <div className="main-app">
       <Header {...props}></Header>
-      <Routes {...props}></Routes>
+      <div className="main_container container-fluid"><Routes {...props}></Routes></div>
     </div>
   );
 }

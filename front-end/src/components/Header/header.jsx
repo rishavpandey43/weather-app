@@ -48,10 +48,14 @@ class Header extends Component {
               <div className="menu-item">
                 <ul className="navbar-nav">
                   <li className="nav-item active">
-                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/" className="nav-link">
+                      Home
+                    </Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/add" className="nav-link">Add City</Link>
+                    <Link to="/add" className="nav-link">
+                      Add City
+                    </Link>
                   </li>
                 </ul>
               </div>
