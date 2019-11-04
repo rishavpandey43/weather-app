@@ -5,6 +5,8 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 import "./weatherCard.css";
 
+// const url = "https://raw.githubusercontent.com/rishavpandey43/weather-app/master/front-end/src/cityList/cityList.json";
+
 function WeatherCard(props) {
   return (
     <div className="weather-card-wrapper">
@@ -34,7 +36,7 @@ function WeatherCard(props) {
                     <div className="before">
                       <FontAwesomeIcon
                         icon={faCaretDown}
-                        className="size-3x text-danger"
+                        className="fa-3x text-danger"
                       />
                     </div>
                     <span className="text">28</span>
@@ -48,7 +50,7 @@ function WeatherCard(props) {
                     <div className="before">
                       <FontAwesomeIcon
                         icon={faCaretUp}
-                        className="size-3x text-success"
+                        className="fa-3x text-success"
                       />
                     </div>
                     <span className="text">32</span>

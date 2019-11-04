@@ -1,0 +1,109 @@
+.add-city-card-wrapper {
+  height: calc(100vh - 165px);
+  min-height: calc(100vh - 165px);
+  background: #fff;
+  margin: 0px 100px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-city-sec {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.fav-city-sec {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.add-city-sec,
+.fav-city-sec {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.fav-city-sec {
+  background: url("../../images/rome_img2.png") no-repeat;
+  background-size: cover;
+}
+
+.search-input {
+  width: 70%;
+  height: 4rem;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  outline: 0;
+  border: none;
+  box-shadow: 0 0 2rem 0.15rem rgba(0, 0, 255, 0.1);
+  font-size: 1rem;
+  color: #131f69;
+  text-transform: uppercase;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-btn {
+  position: absolute;
+  right: 4rem;
+  top: 0px;
+}
+
+.search-btn .btn {
+  width: 4rem;
+  height: 4rem;
+  background-color: #6eedaf;
+  border-radius: 5rem;
+}
+
+.search-sec-wrapper {
+  position: relative;
+}
+
+.search-list-wrapper {
+  width: 70%;
+  margin: 0px auto;
+  text-align: left;
+}
+
+.search-list {
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
+  border: none;
+  border-radius: 1rem;
+}
+
+.search-item {
+  padding: 0.8rem;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.search-item:hover {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.warning:hover {
+  background-color: #fff;
+}
+
+.warning {
+  cursor: not-allowed;
+}
+
+.search-item:first-of-type {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.search-item:last-of-type {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

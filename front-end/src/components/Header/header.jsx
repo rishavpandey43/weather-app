@@ -14,7 +14,7 @@ class Header extends Component {
             <div className="col-4">
               <div className="nav-wrapper text-left">
                 <div className="sidebar-toggle cursor-pointer d-none">
-                  <FontAwesomeIcon icon={faBars} className="size-2x" />
+                  <FontAwesomeIcon icon={faBars} className="fa-2x" />
                 </div>
                 <div className="logo-wrapper">
                   <div className="logo-img">
