@@ -8,6 +8,11 @@ body {
   background: linear-gradient(to top,#5ee7df 0,#66a6ff 100%);
 }
 
+a, a:hover {
+  color: initial !important;
+  text-decoration: none !important;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
