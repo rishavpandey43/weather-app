@@ -19,7 +19,7 @@ class AddCity extends Component {
 
   render() {
     return (
-      <div className="add-city-container mt-4">
+      <div className="add-city-container container-fluid mt-4">
         <div className="add-city-card-wrapper">
           <div className="add-city-sec">
             <div className="search-heading mt-4 mb-3">

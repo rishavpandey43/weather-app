@@ -11,7 +11,7 @@ function App(props) {
   return (
     <div className="main-app">
       <Header {...props}></Header>
-      <div className="main_container container-fluid"><Routes {...props}></Routes></div>
+      <div className="main_container"><Routes {...props}></Routes></div>
     </div>
   );
 }
