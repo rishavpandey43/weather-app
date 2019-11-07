@@ -27,19 +27,21 @@
   height: 80%;
 }
 
-.illustrator-div {
+.add-city-illustrator-div {
   width: 100%;
   position: absolute;
   bottom: 0px;
 }
 
-.illustrator-div img {
+.add-city-illustrator-img {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  width: 100%;
+  height: 30vh;
 }
 
 .weather-type-img {
-  width: 40%;
+  width: 100%;
 }
 
 .temp-detail-wrapper {

@@ -7,7 +7,6 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 import "./weatherCard.css";
 
-
 function WeatherCard(props) {
   function changeToCelsius(kelvinTemp) {
     return (kelvinTemp - 273.15).toFixed(2);
@@ -24,11 +23,9 @@ function WeatherCard(props) {
             <div className="weather-type-img-wrapper">
               <img
                 src={
-                  props.cityDetail
-                    ? require("../../images/" +
-                        props.cityDetail.weather[0].main.toLowerCase() +
-                        ".png")
-                    : require("../../images/clear.png")
+                  "http://openweathermap.org/img/wn/" +
+                  props.cityDetail.weather[0].icon +
+                  "@2x.png"
                 }
                 alt={props.cityDetail.weather[0].main.toLowerCase()}
                 className="weather-type-img"
@@ -95,12 +92,11 @@ function WeatherCard(props) {
                 className="add-btn-img"
               />
             </div>
-            <div className="illustrator-div">
+            <div className="add-city-illustrator-div">
               <img
                 src={require("../../images/city_illustrator.png")}
                 alt="City"
-                width="100%"
-                height="180px"
+                className="add-city-illustrator-img"
               />
             </div>
           </div>
