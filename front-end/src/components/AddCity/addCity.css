@@ -73,12 +73,25 @@
   box-shadow: 0 0 2rem rgba(0, 0, 255, 0.3);
   border: none;
   border-radius: 1rem;
+  min-height: 100px;
 }
 
 .search-item {
   padding: 0.8rem;
   cursor: pointer;
   border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.search-item:first-of-type {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.search-item:last-of-type {
+  border-bottom-left-radius: none;
+  border-bottom-right-radius: none;
+  border-bottom: none;
 }
 
 .search-item:hover {
@@ -93,15 +106,6 @@
   cursor: not-allowed;
 }
 
-.search-item:first-of-type {
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-
-.search-item:last-of-type {
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
 
 .fav-city-sec {
   background: url("../../images/rome_img2.png") no-repeat;

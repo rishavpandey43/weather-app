@@ -7,7 +7,6 @@ import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 import "./weatherCard.css";
 
-// const url = "https://raw.githubusercontent.com/rishavpandey43/weather-app/master/front-end/src/cityList/cityList.json";
 
 function WeatherCard(props) {
   return (
