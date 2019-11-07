@@ -22,39 +22,20 @@ class AddCity extends Component {
       city404Error: false
     };
   }
+  componentWillReceiveProps(prevProps) {
+    this.setState({
+      cityList: prevProps.mainCityList,
+      displayCityList: this.save5CityList(prevProps.mainCityList)
+    });
+  }
+
   componentDidMount() {
-    const _this = this;
-    axios
-      .get(
-        "https://raw.githubusercontent.com/rishavpandey43/weather-app/master/front-end/src/cityList/cityList.json"
-      )
-      .then(res => {
-        _this.setState({
-          cityList: res.data,
-          displayCityList: _this.save5CityList(
-            res.data.sort((a, b) => {
-              let aName = a.name.toUpperCase();
-              let bName = b.name.toUpperCase();
-              if (
-                aName !== "" &&
-                aName !== "-" &&
-                aName.search("'") === -1 &&
-                aName.search("\\(") === -1 &&
-                aName.search("6") === -1
-              ) {
-                if (aName < bName) {
-                  return -1;
-                }
-                if (aName > bName) {
-                  return 1;
-                }
-                return 0;
-              }
-              return 0;
-            })
-          )
-        });
+    if (this.props.mainCityList) {
+      this.setState({
+        cityList: this.props.mainCityList,
+        displayCityList: this.save5CityList(this.props.mainCityList)
       });
+    }
   }
 
   toggleSearchDisplay = target => {
@@ -133,7 +114,6 @@ class AddCity extends Component {
                       className="search-input"
                       onChange={this.handleSearchInputChange.bind(null)}
                       onFocus={this.toggleSearchDisplay.bind(null, true)}
-                      // onBlur={this.toggleSearchDisplay.bind(null, false)}
                     />
                   </div>
                   <div className="search-btn">
