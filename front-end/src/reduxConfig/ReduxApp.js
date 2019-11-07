@@ -7,8 +7,8 @@ import App from "../App";
 
 function mapStateToProps(state) {
   return {
-    sentenceData: state.loginInfo,
-    userAnswer: state.sidebar
+    mainCityList: state.mainCityList,
+    selectedCityList: state.selectedCityList
   };
 }
 

@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
 
-import loginInfo from "./loginInfo";
-import sidebar from "./sidebar";
 
-const rootReducer = combineReducers({ loginInfo, sidebar });
+import selectedCityList from "./selectedCityList";
+import mainCityList from "./mainCityList"
+
+const rootReducer = combineReducers({ mainCityList, selectedCityList });
 
 export default rootReducer;

@@ -1,13 +1,14 @@
-export function toggleTheme() {
-  return {
-    type: "TOGGLE THEME"
-  };
-}
 
-export function toggleSidebar() {
+export function saveCityList(cityList) {
   return {
-    type: "TOGGLE SIDEBAR"
+    type: "SAVE CITY-LIST",
+    cityList: cityList
   }
 }
 
-
+export function saveSelectedCity(city) {
+  return {
+    type: "SELECTED CITY",
+    city: city
+  }
+}

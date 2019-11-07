@@ -3,8 +3,8 @@ import { createStore } from "redux";
 import rootReducer from "./reducers/index";
 
 const defaultState = {
-  loginInfo: {},
-  sidebar: {}
+  mainCityList: null,
+  selectedCityList: []
 };
 
 const store = createStore(rootReducer, defaultState);

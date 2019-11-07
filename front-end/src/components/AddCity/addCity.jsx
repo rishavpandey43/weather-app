@@ -23,6 +23,7 @@ class AddCity extends Component {
     };
   }
   componentWillReceiveProps(prevProps) {
+    console.log(prevProps);
     this.setState({
       cityList: prevProps.mainCityList,
       displayCityList: this.save5CityList(prevProps.mainCityList)
@@ -88,11 +89,16 @@ class AddCity extends Component {
     }
   };
 
+  saveSelectedCity = city => {
+    this.props.saveSelectedCity(city);
+    this.setState({ displaySearch: false });
+  };
+
   render() {
     let displayCityList = [];
     if (this.state.displayCityList.length > 0) {
       displayCityList = this.state.displayCityList.map((city, i) => (
-        <li className="search-item" key={i}>
+        <li className="search-item" key={i} onClick={this.saveSelectedCity.bind(null, city)}>
           {city.name}
         </li>
       ));
