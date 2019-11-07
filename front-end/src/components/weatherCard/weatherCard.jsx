@@ -9,27 +9,39 @@ import "./weatherCard.css";
 
 
 function WeatherCard(props) {
+  function changeToCelsius(kelvinTemp) {
+    return (kelvinTemp - 273.15).toFixed(2);
+  }
+
   return (
     <div className="weather-card-wrapper">
       {props.type === "display_city" ? (
         <Link to="/detail">
           <div className="display-city-card card ">
             <div className="card-heading">
-              <h3>New Delhi</h3>
+              <h3>{props.cityDetail.name}</h3>
             </div>
             <div className="weather-type-img-wrapper">
               <img
-                src={require("../../images/sunny.png")}
-                alt="sunny"
+                src={
+                  props.cityDetail
+                    ? require("../../images/" +
+                        props.cityDetail.weather[0].main.toLowerCase() +
+                        ".png")
+                    : require("../../images/clear.png")
+                }
+                alt={props.cityDetail.weather[0].main.toLowerCase()}
                 className="weather-type-img"
               />
             </div>
             <div className="temp-detail-wrapper">
               <div className="temp-value">
-                <span className="text font-weight-bold">31°</span>
+                <span className="text font-weight-bold">
+                  {changeToCelsius(props.cityDetail.main.temp)}°
+                </span>
               </div>
               <div className="weather-type-name">
-                <span className="text">Sunny</span>
+                <span className="text">{props.cityDetail.weather[0].main}</span>
               </div>
               <div className="temp-range-wrapper">
                 <div className="row">
@@ -41,7 +53,9 @@ function WeatherCard(props) {
                           className="fa-3x text-danger"
                         />
                       </div>
-                      <span className="text">28</span>
+                      <span className="text">
+                        {changeToCelsius(props.cityDetail.main.temp_min)}
+                      </span>
                       <div className="after">
                         <span className="text-danger text">Min</span>
                       </div>
@@ -55,7 +69,9 @@ function WeatherCard(props) {
                           className="fa-3x text-success"
                         />
                       </div>
-                      <span className="text">32</span>
+                      <span className="text">
+                        {changeToCelsius(props.cityDetail.main.temp_max)}
+                      </span>
                       <div className="after">
                         <span className="text-success text">Max</span>
                       </div>
