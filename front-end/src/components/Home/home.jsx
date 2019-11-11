@@ -32,6 +32,7 @@ class Home extends Component {
         .catch(error => {
           console.log(error);
         });
+      return 0;
     });
   }
 

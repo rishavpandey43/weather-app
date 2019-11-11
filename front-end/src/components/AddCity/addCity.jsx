@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 import Loading from "../loading/Loading";
 
@@ -91,7 +90,8 @@ class AddCity extends Component {
 
   saveSelectedCity = city => {
     this.props.saveSelectedCity(city);
-    this.setState({ displaySearch: false });
+    this.setState({ displaySearch: false, searchInput: "" });
+
   };
 
   render() {
