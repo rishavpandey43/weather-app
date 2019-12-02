@@ -15,7 +15,7 @@ function WeatherCard(props) {
   return (
     <div className="weather-card-wrapper">
       {props.type === "display_city" ? (
-        <Link to="/detail">
+        <Link to={"detail/" + props.cityDetail.id}>
           <div className="display-city-card card ">
             <div className="card-heading">
               <h3>{props.cityDetail.name}</h3>

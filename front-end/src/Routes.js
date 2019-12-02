@@ -20,7 +20,7 @@ function Routes(mainProps) {
       ></Route>
       <Route
         exact
-        path="/detail"
+        path="/detail/:cityId"
         render={props => <CityDetail {...props} {...mainProps} />}
       ></Route>
       <Redirect to="/" />

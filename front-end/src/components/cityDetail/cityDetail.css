@@ -19,7 +19,7 @@
 
 .detail-card {
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   padding: 20px 30px;
   letter-spacing: .3rem;
   text-transform: uppercase;
@@ -40,10 +40,40 @@
   height: 100%;
 }
 
-.weather-detail, .city-name {
+.weather-detail {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.city-name {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-detail {
+  flex-direction: column;
+}
+
+.insight-item {
+  display: flex;
+  flex-direction: row;
+  padding-top: 15px;
+}
+
+.insight-logo-img {
+  width: 35px;
+  height: 35px;
+}
+
+.insight-title {
+  font-size: 0.9em;
+}
+
+.insight-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-left: 10px;
 }
 
 .temp-detail .temp-value {
@@ -52,7 +82,8 @@
 }
 
 .temp-detail .temp-type {
-  font-size: 1.2em;
+  font-size: 1.6em;
+  margin-left: 70px;
 }
 
 .city-name {
@@ -60,7 +91,11 @@
 }
 
 .city-title {
-  margin-bottom: 50%;
-  border-bottom: 5px solid #fff;
+  margin-top: 20%;
   padding-bottom: 10px;
+}
+
+.city-title h2 {
+  position: relative;
+  border-bottom: 5px solid #fff;
 }
