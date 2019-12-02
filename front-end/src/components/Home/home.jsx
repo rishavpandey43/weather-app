@@ -15,7 +15,7 @@ class Home extends Component {
   }
   componentDidMount() {
     let _this = this;
-    this.props.selectedCityList.map((city, i) => {
+    this.props.selectedCityList.map((city) => {
       axios
         .get(
           process.env.REACT_APP_OPEN_WEATHER_API +

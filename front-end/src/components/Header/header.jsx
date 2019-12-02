@@ -57,6 +57,11 @@ class Header extends Component {
                       Add City
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link to="/add" className="nav-link" target="_blank">
+                      Dashboard Analysis
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

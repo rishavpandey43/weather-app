@@ -45,7 +45,7 @@ class AddCity extends Component {
   filterCityList = cityName => {
     let filterList = [];
     if (this.state.cityList) {
-      this.state.cityList.map((city, i) => {
+      this.state.cityList.map(city => {
         if (city.name.toUpperCase().search(cityName.toUpperCase()) !== -1) {
           filterList.push(city);
         }
@@ -90,15 +90,22 @@ class AddCity extends Component {
 
   saveSelectedCity = city => {
     this.props.saveSelectedCity(city);
-    this.setState({ displaySearch: false, searchInput: "" });
-
+    this.setState({
+      displaySearch: false,
+      searchInput: ""
+    });
+    this.props.history.push("/");
   };
 
   render() {
     let displayCityList = [];
     if (this.state.displayCityList.length > 0) {
       displayCityList = this.state.displayCityList.map((city, i) => (
-        <li className="search-item" key={i} onClick={this.saveSelectedCity.bind(null, city)}>
+        <li
+          className="search-item"
+          key={i}
+          onClick={this.saveSelectedCity.bind(null, city)}
+        >
           {city.name}
         </li>
       ));
